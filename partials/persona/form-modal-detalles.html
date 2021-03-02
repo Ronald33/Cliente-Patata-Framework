@@ -1,0 +1,10 @@
+<form name="form" ng-submit="vm.guardar()">
+    <div class="modal-header bg-primary">
+        <h3 class="modal-title">Detalles de la persona</h3>
+    </div>
+    <div class="modal-body" ng-include="'partials/persona/detalles.html'"></div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default btn-block" ng-click="vm.cerrar()">Cerrar</button>
+    </div>
+    <show-errors errors="vm.errors"></show-errors>
+</form>

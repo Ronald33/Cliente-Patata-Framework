@@ -1,0 +1,34 @@
+<fieldset>
+    <ipersona persona="vm.usuario.persona"></ipersona>
+    <input type="hidden" name="hpersona" ng-model="vm.usuario.persona.id" required />
+</fieldset>
+
+<div class="form-group">
+    <label for="usuario" class="control-label">Usuario<span class="text-danger">*</span></label>
+    <input type="text" name="usuario" id="usuario" class="form-control" ng-model="vm.usuario.usuario" minlength="3" required />
+</div>
+
+<div class="form-group">
+    <label for="tipo" class="control-label">Tipo<span class="text-danger">*</span></label>
+    <div class="btn-group btn-group-justified">
+        <label class="btn btn-default" ng-model="vm.usuario.tipo" uib-btn-radio="'VENDEDOR'">Vendedor</label>
+        <label class="btn btn-default" ng-model="vm.usuario.tipo" uib-btn-radio="'ADMINISTRADOR'">Administrador</label>
+    </div>
+</div>
+
+<div class="form-group" ng-show="vm.action == 'Editar'">
+    <button type="button" class="btn btn-warning btn-block" ng-click="vm.usuario.cambiarContrasenha = !vm.usuario.cambiarContrasenha">{{vm.usuario.cambiarContrasenha ? 'Mantener' : 'Cambiar'}} contraseña</button>
+</div>
+
+<div ng-if="vm.action == 'Agregar' || vm.usuario.cambiarContrasenha">
+    <div class="form-group">
+        <label for="contrasenha" class="control-label">Contraseña<span class="text-danger">*</span></label>
+        <input type="password" name="contrasenha" id="contrasenha" class="form-control" ng-model="vm.usuario.contrasenha" minlength="6" required />
+    </div>
+    
+    <div class="form-group">
+        <label for="contrasenha" class="control-label">Repita la contraseña<span class="text-danger">*</span></label>
+        <input type="password" name="contrasenha2" id="contrasenha2" class="form-control" ng-model="contrasenha2" is-equal-to="vm.usuario.contrasenha" disable-validation-message="" required />
+        <span class="help-block" ng-show="form.contrasenha2.$invalid && form.contrasenha2.$dirty">Las contraseñas no coinciden</span>
+    </div>
+</div>

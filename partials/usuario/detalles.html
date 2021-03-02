@@ -1,0 +1,18 @@
+<fieldset>
+    <legend>Detalles del usuario</legend>
+    <div class="form-group">
+        <label for="usuario" class="control-label">Usuario</label>
+        <input type="text" name="usuario" id="usuario" class="form-control" ng-value="vm.usuario.usuario" readonly />
+    </div>
+    <div class="form-group">
+        <label for="tipo" class="control-label">Tipo<span class="text-danger">*</span></label>
+        <div class="btn-group btn-group-justified">
+            <label class="btn btn-default" ng-model="vm.usuario.tipo" uib-btn-radio="'VENDEDOR'" disabled="disabled">Vendedor</label>
+            <label class="btn btn-default" ng-model="vm.usuario.tipo" uib-btn-radio="'ADMINISTRADOR'" disabled="disabled">Administrador</label>
+        </div>
+    </div>
+</fieldset>
+<fieldset>
+    <legend>Detalles de la persona</legend>
+    <ng-include src="'partials/persona/detalles.html'"></ng-include>
+</fieldset>

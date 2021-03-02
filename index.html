@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es" ng-app="app">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="description" content="" />
+		<meta name="author" content="" />
+		
+		<title>{{$state.current.title}}</title>
+		
+		<!-- Styles -->
+		<link href="assets/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+		<link href="assets/bower_components/metisMenu/dist/metisMenu.min.css" rel="stylesheet" />
+		<link href="assets/bower_components/SpinKit/spinkit.min.css" rel="stylesheet" />
+		<link href="assets/bower_components/alertify-js/build/css/alertify.min.css" rel="stylesheet" />
+		<link href="assets/bower_components/alertify-js/build/css/themes/bootstrap.min.css" rel="stylesheet" />
+		<link href="assets/bower_components/izitoast/dist/css/iziToast.min.css" rel="stylesheet" />
+		<link href="assets/bower_components/angular-ui-select/dist/select.min.css" rel="stylesheet" />
+		<link href="assets/css/startmin.css" rel="stylesheet" />
+		<link href="assets/css/styles.css" rel="stylesheet" />
+		<!-- End Styles -->
+	</head>
+	<body>
+		
+		<ui-view></ui-view>
+		<ng-include src="'loading.html'" ng-show="isLoading()"></ng-include>
+		
+		<!-- Vendor -->
+		<script src="assets/bower_components/jquery/dist/jquery.min.js"></script>
+		<script src="assets/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+		<script src="assets/bower_components/metisMenu/dist/metisMenu.min.js"></script>
+		<script src="assets/bower_components/alertify-js/build/alertify.js"></script>
+		<script src="assets/bower_components/angular/angular.min.js"></script>
+		<script src="assets/bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+		<script src="assets/bower_components/angular-ui-router/release/stateEvents.min.js"></script>
+		<script src="assets/bower_components/angular-ngStorage/angular-ngStorage.min.js"></script>
+		<script src="assets/bower_components/angular-resource/angular-resource.min.js"></script>
+		<script src="assets/bower_components/angular-animate/angular-animate.min.js"></script>
+		<script src="assets/bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+		<script src="assets/bower_components/angular-auto-validate/dist/jcs-auto-validate.min.js"></script>
+		<script src="assets/bower_components/angular-smart-table/dist/smart-table.min.js"></script>
+		<script src="assets/bower_components/izitoast/dist/js/iziToast.min.js"></script>
+		<script src="assets/bower_components/angular-ui-select/dist/select.min.js"></script>
+		<!-- End Vendor -->
+		
+		<!-- App -->
+		<script src="assets/js/startmin.js"></script>
+		<script src="assets/js/app.js"></script>
+		<!-- End App -->
+
+		<!-- Constants -->
+		<script src="assets/js/constants/config.js"></script>
+		<!-- End Constants -->
+
+		<!-- Core -->
+		<script src="assets/js/config.js"></script>
+		<script src="assets/js/run.js"></script>
+		<!-- End Core -->
+
+		<!-- Interceptors -->
+		<script src="assets/js/interceptors/globalInterceptor.js"></script>
+		<script src="assets/js/interceptors/patataInterceptor.js"></script>
+		<!-- End Interceptors -->
+
+		<!-- Resources -->
+		<script src="assets/js/resources.js"></script>
+		<!-- End Resources -->
+
+		<!-- Factories -->
+		
+		<!-- End Factories -->
+
+		<!-- Services -->
+		<script src="assets/js/services/auth.service.js"></script>
+		<script src="assets/js/services/helper.service.js"></script>
+		<script src="assets/js/services/dialog.service.js"></script>
+		<script src="assets/js/services/notification.service.js"></script>
+		<!-- End Services -->
+
+		<!-- Directives -->
+		<script src="assets/js/directives/directives.js"></script>
+		<script src="assets/js/directives/ipersona.directive.js"></script>
+		<script src="assets/js/directives/file.directive.js"></script>
+		<script src="assets/js/directives/showErrors.directive.js"></script>
+		<script src="assets/js/directives/skipValidation.directive.js"></script>
+		<!-- End Directives -->
+
+		<!-- Filters -->
+		<script src="assets/js/filters.js"></script>
+		<!-- End Filters -->
+		
+		<!-- Controllers -->
+		<script src="assets/js/controllers/loginController.js"></script>
+		<script src="assets/js/controllers/menuController.js"></script>
+		<script src="assets/js/controllers/defaultController.js"></script>
+		<script src="assets/js/controllers/personaFormController.js"></script>
+		<script src="assets/js/controllers/personaDetallesController.js"></script>
+		<script src="assets/js/controllers/usuarioListaController.js"></script>
+		<script src="assets/js/controllers/usuarioDetallesController.js"></script>
+		<script src="assets/js/controllers/usuarioFormController.js"></script>
+		<!-- End Controllers -->
+	</body>
+</html>

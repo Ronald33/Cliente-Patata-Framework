@@ -1,0 +1,33 @@
+<div ng-form name="ipersona_form">
+    <fieldset>
+        <div class="row">
+            <div class="col-sm-12">
+                <label for="documento" class="control-label">Nombres y apellidos<span class="text-danger">*</span></label>
+            </div>
+            <div class="col-sm-4">
+                <div class="form-group">
+                    <ui-select ng-model="vm.persona">
+                        <ui-select-match allow-clear="true" placeholder="Seleccione">
+                            <span ng-bind="$select.selected | persona"></span>
+                        </ui-select-match>
+                        <ui-select-choices repeat="item in (vm.personas | orderBy: 'nombres') track by item.id" refresh="vm.personaRefresh($select.search)" refresh-delay="300">
+                            <span ng-bind="item | persona"></span>
+                        </ui-select-choices>
+                    </ui-select>
+                </div>
+            </div>
+            <div class="col-lg-2">
+                <button type="button" name="button" class="btn btn-info btn-block" ng-click="vm.detalles(vm.persona)"  ng-disabled="!vm.persona.id">Ver detalles</button>
+            </div>
+            <div class="col-lg-2">
+                <button type="button" name="button" class="btn btn-warning btn-block" ng-click="vm.abrir_form(true)"  ng-disabled="!vm.persona.id">Editar</button>
+            </div>
+            <div class="col-lg-2">
+                <button type="button" name="button" class="btn btn-danger btn-block" ng-click="vm.eliminar()"  ng-disabled="!vm.persona.id">Eliminar</button>
+            </div>
+            <div class="col-lg-2">
+                <button type="button" name="button" class="btn btn-primary btn-block" ng-click="vm.abrir_form(false)">Crear</button>
+            </div>
+        </div>
+    </fieldset>
+</div>

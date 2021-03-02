@@ -1,0 +1,12 @@
+<h1 class="page-header">
+    {{vm.action}} usuario
+</h1>
+
+<form name="form" id="form">
+    <ng-include src="'partials/usuario/inputs.html'"></ng-include>
+    <div class="clearfix">
+        <button type="button" class="btn btn-default pull-left" ng-click="goBack()">Atras</button>
+        <button type="submit" class="btn btn-success pull-right" ng-click="vm.guardar()" ng-disabled="form.$invalid">Guardar</button>
+    </div>
+    <show-errors errors="vm.errors"></show-errors>
+</form>
